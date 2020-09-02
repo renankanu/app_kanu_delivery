@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Kanu Delivery',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Lato',
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
