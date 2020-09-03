@@ -1,4 +1,3 @@
-import 'package:app_kanu_delivery/src/utils/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -15,13 +14,13 @@ class CustomSurffixIcon extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.fromLTRB(
         0,
-        getProportionateScreenWidth(14),
+        14,
         0,
-        getProportionateScreenWidth(14),
+        14,
       ),
       child: SvgPicture.asset(
         svgIcon,
-        height: getProportionateScreenWidth(18),
+        height: 0,
       ),
     );
   }
