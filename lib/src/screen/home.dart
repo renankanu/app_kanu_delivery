@@ -1,3 +1,4 @@
+import 'package:app_kanu_delivery/constants.dart';
 import 'package:app_kanu_delivery/src/widget/curves_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -15,18 +16,12 @@ class Home extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 100, left: 50),
                 width: double.infinity,
                 height: 300,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [Colors.red, Colors.red.withOpacity(0.9)],
-                  ),
-                ),
+                color: kPumpkin,
                 child: Text(
                   'Login',
                   style: TextStyle(
                     fontSize: 40,
-                    color: Color(0xff6a515e),
+                    color: kWhite,
                   ),
                 ),
               ),

@@ -1,4 +1,6 @@
-import 'package:app_kanu_delivery/src/screen/home.dart';
+import 'package:app_kanu_delivery/src/routes/route.dart';
+import 'package:app_kanu_delivery/src/screen/splash/splash_screen.dart';
+import 'package:app_kanu_delivery/src/utils/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,12 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Kanu Delivery',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'Lato',
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: Home(),
+      theme: theme(),
+      initialRoute: SplashScreen.routeName,
+      routes: routes,
     );
   }
 }
