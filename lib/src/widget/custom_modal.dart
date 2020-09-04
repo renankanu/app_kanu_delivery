@@ -1,6 +1,7 @@
 import 'package:app_kanu_delivery/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomModal extends StatefulWidget {
   final String message;
@@ -17,9 +18,7 @@ class _CustomModalState extends State<CustomModal> {
     return AlertDialog(
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(15))),
-      title: Row(
-        children: [Text('Oppps!'), Text('Oppps!')],
-      ),
+      title: Text('Oppps! 😟'),
       actions: <Widget>[
         OutlineButton(
           textColor: kPumpkin,
