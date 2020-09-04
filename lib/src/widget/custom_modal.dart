@@ -17,28 +17,26 @@ class _CustomModalState extends State<CustomModal> {
     return AlertDialog(
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(15))),
-      title: Text('Oppps!'),
+      title: Row(
+        children: [Text('Oppps!'), Text('Oppps!')],
+      ),
+      actions: <Widget>[
+        OutlineButton(
+          textColor: kPumpkin,
+          borderSide: BorderSide(color: kPumpkin),
+          child: Text('OK'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ],
+      actionsPadding: EdgeInsets.symmetric(horizontal: 16.0),
       content: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text(widget.message),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                OutlineButton(
-                  splashColor: kPumpkin,
-                  child: Text('OK'),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-              ],
-            )
           ],
         ),
       ),

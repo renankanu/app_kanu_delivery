@@ -14,14 +14,7 @@ class _SignFormState extends State<SignForm> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
-  String email;
-  String password;
   bool remember = false;
-  final List<String> errors = [];
-
-  void removeError() {
-    print(email);
-  }
 
   void callModal(BuildContext context, String message) {
     showDialog(
@@ -104,7 +97,6 @@ class _SignFormState extends State<SignForm> {
     return TextFormField(
       controller: _passwordController,
       obscureText: true,
-      onSaved: (newValue) => password = newValue,
       decoration: InputDecoration(
         labelText: "Password",
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
@@ -116,7 +108,6 @@ class _SignFormState extends State<SignForm> {
     return TextFormField(
       controller: _emailController,
       keyboardType: TextInputType.emailAddress,
-      onSaved: (newValue) => email = newValue,
       decoration: InputDecoration(
         hintText: "Email",
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
