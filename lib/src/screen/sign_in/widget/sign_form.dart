@@ -1,8 +1,8 @@
 import 'package:app_kanu_delivery/constants.dart';
 import 'package:app_kanu_delivery/src/utils/size_config.dart';
+import 'package:app_kanu_delivery/src/widget/custom_modal.dart';
 import 'package:app_kanu_delivery/src/widget/custom_surfix_icon.dart';
 import 'package:app_kanu_delivery/src/widget/default_button.dart';
-import 'package:app_kanu_delivery/src/widget/form_error.dart';
 import 'package:flutter/material.dart';
 
 class SignForm extends StatefulWidget {
@@ -12,23 +12,47 @@ class SignForm extends StatefulWidget {
 
 class _SignFormState extends State<SignForm> {
   final _formKey = GlobalKey<FormState>();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
   String email;
   String password;
   bool remember = false;
   final List<String> errors = [];
 
-  void addError({String error}) {
-    if (!errors.contains(error))
-      setState(() {
-        errors.add(error);
-      });
+  void removeError() {
+    print(email);
   }
 
-  void removeError({String error}) {
-    if (errors.contains(error))
-      setState(() {
-        errors.remove(error);
-      });
+  void callModal(BuildContext context, String message) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return CustomModal(message: message);
+        });
+  }
+
+  void validForm() {
+    if (_emailController.text.isEmpty) {
+      callModal(context, kEmailNullError);
+      return;
+    }
+    if (!emailValidatorRegExp.hasMatch(_emailController.text)) {
+      callModal(context, kInvalidEmailError);
+      return;
+    }
+    if (_passwordController.text.isEmpty) {
+      callModal(context, kPassNullError);
+      return;
+    }
+    if (_passwordController.text.length < 8) {
+      callModal(context, kShortPassError);
+      return;
+    }
+    if (_formKey.currentState.validate()) {
+      _formKey.currentState.save();
+      // TODO call new screen here
+      // Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+    }
   }
 
   @override
@@ -64,16 +88,11 @@ class _SignFormState extends State<SignForm> {
               )
             ],
           ),
-          FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(20)),
           DefaultButton(
             text: "Continue",
             press: () {
-              if (_formKey.currentState.validate()) {
-                _formKey.currentState.save();
-                // TODO call new screen here
-                // Navigator.pushNamed(context, LoginSuccessScreen.routeName);
-              }
+              validForm();
             },
           ),
         ],
@@ -83,26 +102,9 @@ class _SignFormState extends State<SignForm> {
 
   TextFormField buildPasswordFormField() {
     return TextFormField(
+      controller: _passwordController,
       obscureText: true,
       onSaved: (newValue) => password = newValue,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kPassNullError);
-        } else if (value.length >= 8) {
-          removeError(error: kShortPassError);
-        }
-        return null;
-      },
-      validator: (value) {
-        if (value.isEmpty) {
-          addError(error: kPassNullError);
-          return "";
-        } else if (value.length < 8) {
-          addError(error: kShortPassError);
-          return "";
-        }
-        return null;
-      },
       decoration: InputDecoration(
         labelText: "Password",
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
@@ -112,28 +114,11 @@ class _SignFormState extends State<SignForm> {
 
   TextFormField buildEmailFormField() {
     return TextFormField(
+      controller: _emailController,
       keyboardType: TextInputType.emailAddress,
       onSaved: (newValue) => email = newValue,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kEmailNullError);
-        } else if (emailValidatorRegExp.hasMatch(value)) {
-          removeError(error: kInvalidEmailError);
-        }
-        return null;
-      },
-      validator: (value) {
-        if (value.isEmpty) {
-          addError(error: kEmailNullError);
-          return "";
-        } else if (!emailValidatorRegExp.hasMatch(value)) {
-          addError(error: kInvalidEmailError);
-          return "";
-        }
-        return null;
-      },
       decoration: InputDecoration(
-        labelText: "Email",
+        hintText: "Email",
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
       ),
     );
