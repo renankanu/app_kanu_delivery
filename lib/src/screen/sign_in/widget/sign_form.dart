@@ -1,7 +1,6 @@
 import 'package:app_kanu_delivery/constants.dart';
 import 'package:app_kanu_delivery/src/utils/size_config.dart';
 import 'package:app_kanu_delivery/src/widget/custom_modal.dart';
-import 'package:app_kanu_delivery/src/widget/custom_surfix_icon.dart';
 import 'package:app_kanu_delivery/src/widget/default_button.dart';
 import 'package:flutter/material.dart';
 
@@ -99,7 +98,6 @@ class _SignFormState extends State<SignForm> {
       obscureText: true,
       decoration: InputDecoration(
         labelText: "Password",
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
     );
   }
@@ -110,7 +108,6 @@ class _SignFormState extends State<SignForm> {
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         hintText: "Email",
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
       ),
     );
   }

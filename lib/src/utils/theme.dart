@@ -19,7 +19,6 @@ InputDecorationTheme inputDecorationTheme() {
   OutlineInputBorder outlineInputBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(8),
     borderSide: BorderSide(color: kTextColor),
-    gapPadding: 2,
   );
   return InputDecorationTheme(
     labelStyle: new TextStyle(color: kStack),
