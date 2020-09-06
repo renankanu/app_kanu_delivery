@@ -41,7 +41,7 @@ class CustomAppBar extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
-                if (initialPage < listStep.length)
+                if ((initialPage + 1) < listStep.length)
                   controller.animateToPage(listStep.length,
                       duration: Duration(microseconds: 500),
                       curve: Curves.easeInOut);

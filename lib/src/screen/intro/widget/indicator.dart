@@ -15,7 +15,7 @@ class Indicator extends StatelessWidget {
     return Container(
       width: 90,
       height: 90,
-      margin: EdgeInsets.symmetric(vertical: 12),
+      margin: EdgeInsets.symmetric(vertical: 20),
       child: Stack(
         children: [
           Align(
@@ -25,7 +25,7 @@ class Indicator extends StatelessWidget {
               height: 90,
               child: CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation(kPumpkin),
-                value: (initialPage + 1) / (listStep.length + 1),
+                value: (initialPage + 1) * 0.34,
               ),
             ),
           ),
@@ -33,7 +33,7 @@ class Indicator extends StatelessWidget {
             alignment: Alignment.center,
             child: GestureDetector(
               onTap: () {
-                if (initialPage < listStep.length)
+                if ((initialPage + 1) < listStep.length)
                   controller.animateToPage(
                     initialPage + 1,
                     duration: Duration(microseconds: 500),

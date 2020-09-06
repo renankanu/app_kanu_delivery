@@ -1,10 +1,7 @@
-import 'package:app_kanu_delivery/constants.dart';
 import 'package:app_kanu_delivery/model/step_model.dart';
 import 'package:app_kanu_delivery/src/screen/intro/widget/body.dart';
 import 'package:app_kanu_delivery/src/screen/intro/widget/custom_app_bar.dart';
 import 'package:app_kanu_delivery/src/screen/intro/widget/indicator.dart';
-import 'package:app_kanu_delivery/src/screen/intro/widget/intro_image.dart';
-import 'package:app_kanu_delivery/src/screen/intro/widget/intro_text.dart';
 import 'package:flutter/material.dart';
 
 class IntroScreen extends StatefulWidget {
