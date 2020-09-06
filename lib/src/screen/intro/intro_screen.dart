@@ -1,4 +1,6 @@
+import 'package:app_kanu_delivery/src/screen/intro/widget/body.dart';
 import 'package:app_kanu_delivery/src/screen/intro/widget/custom_app_bar.dart';
+import 'package:app_kanu_delivery/src/screen/intro/widget/indicator.dart';
 import 'package:flutter/material.dart';
 
 class IntroScreen extends StatefulWidget {
@@ -15,7 +17,11 @@ class _IntroScreenState extends State<IntroScreen> {
     return Container(
       child: Scaffold(
         body: Column(
-          children: [CustomAppBar()],
+          children: [
+            CustomAppBar(),
+            Body(),
+            Indicator(),
+          ],
         ),
       ),
     );
