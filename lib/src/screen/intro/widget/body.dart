@@ -4,13 +4,15 @@ import 'package:app_kanu_delivery/src/screen/intro/widget/intro_text.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
+  final PageController controller;
+  final List<StepModel> listStep;
+
+  const Body({Key key, this.controller, this.listStep}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    List<StepModel> listStep = StepModel.list;
-    var _controller = PageController();
     return Expanded(
       child: PageView.builder(
-        controller: _controller,
+        controller: controller,
         itemCount: listStep.length,
         itemBuilder: (context, index) {
           return Column(

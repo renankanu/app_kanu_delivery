@@ -1,8 +1,15 @@
 import 'package:app_kanu_delivery/constants.dart';
+import 'package:app_kanu_delivery/model/step_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Indicator extends StatelessWidget {
+  final int initialPage;
+  final List<StepModel> listStep;
+  final PageController controller;
+
+  const Indicator({Key key, this.initialPage, this.listStep, this.controller})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,14 +25,21 @@ class Indicator extends StatelessWidget {
               height: 90,
               child: CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation(kPumpkin),
-                value: 0.25,
+                value: (initialPage + 1) / (listStep.length + 1),
               ),
             ),
           ),
           Align(
             alignment: Alignment.center,
             child: GestureDetector(
-              onTap: () {},
+              onTap: () {
+                if (initialPage < listStep.length)
+                  controller.animateToPage(
+                    initialPage + 1,
+                    duration: Duration(microseconds: 500),
+                    curve: Curves.easeIn,
+                  );
+              },
               child: Container(
                 width: 65,
                 height: 65,
