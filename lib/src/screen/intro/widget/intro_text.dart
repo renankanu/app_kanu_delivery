@@ -11,7 +11,6 @@ class IntroText extends StatelessWidget {
       desc,
       style: TextStyle(
         fontWeight: FontWeight.w500,
-        fontSize: 20,
       ),
       textAlign: TextAlign.center,
     );

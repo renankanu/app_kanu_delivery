@@ -32,10 +32,10 @@ class CustomAppBar extends StatelessWidget {
               child: AnimatedOpacity(
                 opacity: initialPage != 0 ? 1.0 : 0.0,
                 duration: kAnimationDuration,
-                curve: initialPage != 0 ? Curves.bounceIn : Curves.bounceOut,
+                curve: initialPage != 0 ? Curves.easeIn : Curves.easeOut,
                 child: Container(
                   width: 50,
-                  height: 50,
+                  height: 40,
                   decoration: BoxDecoration(
                     color: Colors.grey.withAlpha(50),
                     borderRadius: BorderRadius.all(
