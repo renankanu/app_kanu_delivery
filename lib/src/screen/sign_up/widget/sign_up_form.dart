@@ -1,10 +1,9 @@
+import 'package:app_kanu_delivery/constants.dart';
 import 'package:app_kanu_delivery/src/utils/size_config.dart';
 import 'package:app_kanu_delivery/src/widget/custom_surfix_icon.dart';
 import 'package:app_kanu_delivery/src/widget/default_button.dart';
 import 'package:app_kanu_delivery/src/widget/form_error.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../constants.dart';
 
 class SignUpForm extends StatefulWidget {
   @override

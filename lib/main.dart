@@ -1,6 +1,5 @@
 import 'package:app_kanu_delivery/src/routes/route.dart';
 import 'package:app_kanu_delivery/src/screen/intro/intro_screen.dart';
-import 'package:app_kanu_delivery/src/screen/splash/splash_screen.dart';
 import 'package:app_kanu_delivery/src/utils/theme.dart';
 import 'package:flutter/material.dart';
 

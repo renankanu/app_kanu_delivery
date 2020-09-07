@@ -27,16 +27,21 @@ class CustomAppBar extends StatelessWidget {
                     curve: Curves.easeIn,
                   );
               },
-              child: Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.grey.withAlpha(50),
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(16),
+              child: AnimatedOpacity(
+                opacity: initialPage != 0 ? 1.0 : 0.0,
+                duration: Duration(milliseconds: 500),
+                curve: initialPage != 0 ? Curves.bounceIn : Curves.bounceOut,
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.withAlpha(50),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(16),
+                    ),
                   ),
+                  child: Icon(Icons.arrow_back_ios),
                 ),
-                child: Icon(Icons.arrow_back_ios),
               ),
             ),
             FlatButton(
