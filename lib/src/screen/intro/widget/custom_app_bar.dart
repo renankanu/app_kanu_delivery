@@ -1,5 +1,7 @@
+import 'package:app_kanu_delivery/constants.dart';
 import 'package:app_kanu_delivery/model/step_model.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomAppBar extends StatelessWidget {
   final int initialPage;
@@ -23,13 +25,13 @@ class CustomAppBar extends StatelessWidget {
                 if (initialPage > 0)
                   controller.animateToPage(
                     initialPage - 1,
-                    duration: Duration(microseconds: 500),
+                    duration: kAnimationDuration,
                     curve: Curves.easeIn,
                   );
               },
               child: AnimatedOpacity(
                 opacity: initialPage != 0 ? 1.0 : 0.0,
-                duration: Duration(milliseconds: 500),
+                duration: kAnimationDuration,
                 curve: initialPage != 0 ? Curves.bounceIn : Curves.bounceOut,
                 child: Container(
                   width: 50,
@@ -40,7 +42,10 @@ class CustomAppBar extends StatelessWidget {
                       Radius.circular(16),
                     ),
                   ),
-                  child: Icon(Icons.arrow_back_ios),
+                  child: Icon(
+                    FontAwesomeIcons.arrowLeft,
+                    size: 18,
+                  ),
                 ),
               ),
             ),
@@ -48,8 +53,7 @@ class CustomAppBar extends StatelessWidget {
               onPressed: () {
                 if ((initialPage + 1) < listStep.length)
                   controller.animateToPage(listStep.length,
-                      duration: Duration(microseconds: 500),
-                      curve: Curves.easeInOut);
+                      duration: kAnimationDuration, curve: Curves.easeInOut);
               },
               child: Text(
                 "Skip",

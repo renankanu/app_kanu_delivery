@@ -9,7 +9,7 @@ class IntroImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.asset(
       image,
-      height: MediaQuery.of(context).size.height * .5,
+      height: MediaQuery.of(context).size.height * .4,
     );
   }
 }

@@ -34,9 +34,8 @@ class Indicator extends StatelessWidget {
             child: GestureDetector(
               onTap: () {
                 if ((initialPage + 1) < listStep.length)
-                  controller.animateToPage(
-                    initialPage + 1,
-                    duration: Duration(microseconds: 500),
+                  controller.nextPage(
+                    duration: kAnimationDuration,
                     curve: Curves.easeIn,
                   );
               },

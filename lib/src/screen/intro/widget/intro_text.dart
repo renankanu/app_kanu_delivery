@@ -10,7 +10,7 @@ class IntroText extends StatelessWidget {
     return Text(
       desc,
       style: TextStyle(
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w500,
         fontSize: 20,
       ),
       textAlign: TextAlign.center,

@@ -16,6 +16,23 @@ class _IntroScreenState extends State<IntroScreen> {
   List<StepModel> listStep = StepModel.list;
   var _controller = PageController();
   var initialPage = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = PageController(
+      initialPage: 0,
+      keepPage: true,
+      viewportFraction: 1.0,
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     _controller.addListener(() {
