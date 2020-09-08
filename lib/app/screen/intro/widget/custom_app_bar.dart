@@ -1,5 +1,6 @@
 import 'package:app_kanu_delivery/app/constants.dart';
 import 'package:app_kanu_delivery/app/model/step_model.dart';
+import 'package:app_kanu_delivery/app/utils/i18n/app_translate.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -56,7 +57,7 @@ class CustomAppBar extends StatelessWidget {
                       duration: kAnimationDuration, curve: Curves.easeInOut);
               },
               child: Text(
-                "Skip",
+                AppTranslate(context).text('intro.skip'),
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black,

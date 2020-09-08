@@ -1,3 +1,4 @@
+import 'package:app_kanu_delivery/app/utils/i18n/app_localizations.dart';
 import 'package:app_kanu_delivery/app/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -18,9 +19,10 @@ class AppWidget extends StatelessWidget {
         Locale('pt', 'BR'),
       ],
       localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
+        AppLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
       ],
       localeResolutionCallback: (locale, supportedLocales) {
         for (var supportedLocale in supportedLocales) {

@@ -1,3 +1,6 @@
 {
-  "skip": "Pular"
+  "intro": {
+    "skip": "Pular"
+  },
+  "login": {}
 }
