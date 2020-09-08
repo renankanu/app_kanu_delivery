@@ -18,14 +18,16 @@ class Body extends StatelessWidget {
           return Column(
             children: [
               index.isOdd
-                  ? IntroText(desc: listStep[index].text)
+                  ? IntroText(
+                      title: listStep[index].title, desc: listStep[index].text)
                   : IntroImage(image: listStep[index].image),
               SizedBox(
                 height: 55,
               ),
               index.isOdd
                   ? IntroImage(image: listStep[index].image)
-                  : IntroText(desc: listStep[index].text),
+                  : IntroText(
+                      title: listStep[index].title, desc: listStep[index].text),
             ],
           );
         },
