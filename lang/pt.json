@@ -1,6 +1,12 @@
 {
   "intro": {
-    "skip": "Pular"
+    "skip": "Pular",
+    "screen_one_title": "Escolha seu pedido",
+    "screen_two_title": "Entrega de alimentos",
+    "screen_three_title": "Desfrute de sua refeição",
+    "screen_one_info": "Navegue no menu\ne faça o pedido diretamente\nno aplicativo.",
+    "screen_two_info": "Seu pedido será\nimediatamente recolhido e\nenviado pelo nosso(a) entregador(a).",
+    "screen_three_info": "Desfrute de comida saborosa e quente, tentamos \nser o melhor para você."
   },
   "login": {}
 }

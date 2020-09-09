@@ -1,6 +1,12 @@
 {
   "intro": {
-    "skip": "Skip"
+    "skip": "Skip",
+    "screen_one_title": "Choose your order",
+    "screen_two_title": "Food delivery",
+    "screen_three_title": "Bon appetit",
+    "screen_one_info": "Browse the menu\nand order directly from\nthe application",
+    "screen_two_info": "Your order will be\nimmediately collected and\nsent by our courier",
+    "screen_three_info": "Enjoy tasty and hot food, we try to \nbe is better for you."
   },
   "login": {}
 }

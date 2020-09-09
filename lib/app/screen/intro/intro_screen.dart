@@ -2,6 +2,8 @@ import 'package:app_kanu_delivery/app/model/step_model.dart';
 import 'package:app_kanu_delivery/app/screen/intro/widget/body.dart';
 import 'package:app_kanu_delivery/app/screen/intro/widget/custom_app_bar.dart';
 import 'package:app_kanu_delivery/app/screen/intro/widget/indicator.dart';
+import 'package:app_kanu_delivery/app/utils/i18n/app_translate.dart';
+import 'package:app_kanu_delivery/app/utils/images.dart';
 import 'package:flutter/material.dart';
 
 class IntroScreen extends StatefulWidget {
@@ -13,7 +15,7 @@ class IntroScreen extends StatefulWidget {
 }
 
 class _IntroScreenState extends State<IntroScreen> {
-  List<StepModel> listStep = StepModel.list;
+  List<StepModel> listStep = List<StepModel>();
   var _controller = PageController();
   var initialPage = 0;
 
@@ -33,8 +35,28 @@ class _IntroScreenState extends State<IntroScreen> {
     super.dispose();
   }
 
+  void createListSteps(BuildContext context) {
+    StepModel stepOne = StepModel(
+        id: 1,
+        title: AppTranslate(context).text('intro.screen_one_title'),
+        text: AppTranslate(context).text('intro.screen_one_info'),
+        image: Images.splash01);
+    StepModel stepTwo = StepModel(
+        id: 2,
+        title: AppTranslate(context).text('intro.screen_two_title'),
+        text: AppTranslate(context).text('intro.screen_two_info'),
+        image: Images.splash02);
+    StepModel stepThree = StepModel(
+        id: 3,
+        title: AppTranslate(context).text('intro.screen_three_title'),
+        text: AppTranslate(context).text('intro.screen_three_info'),
+        image: Images.splash03);
+    listStep = [stepOne, stepTwo, stepThree];
+  }
+
   @override
   Widget build(BuildContext context) {
+    createListSteps(context);
     _controller.addListener(() {
       setState(() {
         initialPage = _controller.page.round();
