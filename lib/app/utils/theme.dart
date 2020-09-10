@@ -8,6 +8,9 @@ ThemeData theme() {
     fontFamily: "Lato",
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
+    cupertinoOverrideTheme: CupertinoThemeData(
+      primaryColor: kGreenPea,
+    ),
     cursorColor: kGreenPea,
     inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -17,7 +20,7 @@ ThemeData theme() {
 InputDecorationTheme inputDecorationTheme() {
   OutlineInputBorder outlineInputBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(8),
-    borderSide: BorderSide(color: kTextColor),
+    borderSide: BorderSide(color: kGreenPea, width: 0.7),
   );
   return InputDecorationTheme(
     labelStyle: new TextStyle(color: kGreenPea),
@@ -25,6 +28,7 @@ InputDecorationTheme inputDecorationTheme() {
     enabledBorder: outlineInputBorder,
     focusedBorder: outlineInputBorder,
     border: outlineInputBorder,
+    hintStyle: TextStyle(color: kGreenPea),
   );
 }
 
@@ -43,7 +47,7 @@ AppBarTheme appBarTheme() {
     brightness: Brightness.light,
     iconTheme: IconThemeData(color: kGreenPea),
     textTheme: TextTheme(
-      headline6: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
+      headline6: TextStyle(color: kGreenPea, fontSize: 18),
     ),
   );
 }

@@ -42,8 +42,7 @@ class _SignFormState extends State<SignForm> {
     }
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
-      // TODO call new screen here
-      // Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+      //call
     }
   }
 
@@ -85,7 +84,7 @@ class _SignFormState extends State<SignForm> {
       controller: _passwordController,
       obscureText: true,
       decoration: InputDecoration(
-        labelText: "Password",
+        hintText: "Password",
       ),
     );
   }
