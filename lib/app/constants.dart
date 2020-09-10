@@ -9,6 +9,8 @@ const kVictoria = const Color(0xFF544482);
 const kWhite = const Color(0xFFFFFFFF);
 const kBblack = const Color(0xFF000000);
 const kTextColor = Color(0xFF000000);
+const kFaceColor = Color(0xFF3b5998);
+const kGoogleColor = Color(0xFFDB4437);
 
 const kAnimationDuration = Duration(milliseconds: 400);
 

@@ -1,8 +1,10 @@
+import 'package:app_kanu_delivery/app/constants.dart';
 import 'package:app_kanu_delivery/app/pages/sign_in/widget/sign_form.dart';
 import 'package:app_kanu_delivery/app/utils/size_config.dart';
 import 'package:app_kanu_delivery/app/widget/no_account_text.dart';
 import 'package:app_kanu_delivery/app/widget/socal_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -36,16 +38,18 @@ class Body extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SocalCard(
-                      icon: "assets/icons/google-icon.svg",
+                        icon: Ionicons.logo_google,
+                        press: () {},
+                        color: kGoogleColor),
+                    SocalCard(
+                      icon: Ionicons.logo_facebook,
                       press: () {},
+                      color: kFaceColor,
                     ),
                     SocalCard(
-                      icon: "assets/icons/facebook-2.svg",
+                      icon: Ionicons.logo_apple,
                       press: () {},
-                    ),
-                    SocalCard(
-                      icon: "assets/icons/twitter.svg",
-                      press: () {},
+                      color: Colors.black,
                     ),
                   ],
                 ),

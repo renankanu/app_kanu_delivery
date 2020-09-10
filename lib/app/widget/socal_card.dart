@@ -1,16 +1,18 @@
 import 'package:app_kanu_delivery/app/utils/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 class SocalCard extends StatelessWidget {
   const SocalCard({
     Key key,
     this.icon,
     this.press,
+    this.color,
   }) : super(key: key);
 
-  final String icon;
+  final IconData icon;
   final Function press;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +21,16 @@ class SocalCard extends StatelessWidget {
       child: Container(
         margin:
             EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(10)),
-        padding: EdgeInsets.all(getProportionateScreenWidth(12)),
-        height: 40,
-        width: 40,
+        padding: EdgeInsets.all(getProportionateScreenWidth(8)),
         decoration: BoxDecoration(
-          color: Color(0xFFF5F6F9),
+          color: color,
           shape: BoxShape.circle,
         ),
-        child: SvgPicture.asset(icon),
+        child: Icon(
+          icon,
+          color: Colors.white,
+          size: 24,
+        ),
       ),
     );
   }
