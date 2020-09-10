@@ -1,5 +1,5 @@
 import 'package:app_kanu_delivery/app/constants.dart';
-import 'package:app_kanu_delivery/app/screen/sign_up/sign_up_screen.dart';
+import 'package:app_kanu_delivery/app/pages/sign_up/sign_up_screen.dart';
 import 'package:app_kanu_delivery/app/utils/size_config.dart';
 import 'package:flutter/material.dart';
 

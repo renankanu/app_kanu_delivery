@@ -1,7 +1,7 @@
 import 'package:app_kanu_delivery/app/model/step_model.dart';
-import 'package:app_kanu_delivery/app/screen/intro/widget/body.dart';
-import 'package:app_kanu_delivery/app/screen/intro/widget/custom_app_bar.dart';
-import 'package:app_kanu_delivery/app/screen/intro/widget/indicator.dart';
+import 'package:app_kanu_delivery/app/pages/intro/widget/body.dart';
+import 'package:app_kanu_delivery/app/pages/intro/widget/custom_app_bar.dart';
+import 'package:app_kanu_delivery/app/pages/intro/widget/indicator.dart';
 import 'package:app_kanu_delivery/app/utils/i18n/app_translate.dart';
 import 'package:app_kanu_delivery/app/utils/images.dart';
 import 'package:flutter/material.dart';

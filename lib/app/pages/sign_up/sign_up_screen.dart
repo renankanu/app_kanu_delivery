@@ -1,4 +1,4 @@
-import 'package:app_kanu_delivery/app/screen/sign_up/widget/body.dart';
+import 'package:app_kanu_delivery/app/pages/sign_up/widget/body.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {

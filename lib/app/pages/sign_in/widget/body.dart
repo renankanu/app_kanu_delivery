@@ -1,4 +1,4 @@
-import 'package:app_kanu_delivery/app/screen/sign_in/widget/sign_form.dart';
+import 'package:app_kanu_delivery/app/pages/sign_in/widget/sign_form.dart';
 import 'package:app_kanu_delivery/app/utils/size_config.dart';
 import 'package:app_kanu_delivery/app/widget/no_account_text.dart';
 import 'package:app_kanu_delivery/app/widget/socal_card.dart';
@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return SafeArea(
       child: SizedBox(
         width: double.infinity,
