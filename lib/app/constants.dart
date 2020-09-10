@@ -1,14 +1,13 @@
 import 'package:app_kanu_delivery/app/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
-const kPumpkin = Color(0xFFFF6D17);
-const kRedDamask = const Color(0xFFDA7334);
+const kAlgaeGreen = Color(0xFF8FE1A3);
+const kPuertoRico = const Color(0xFF37BFA7);
 const kGreenPea = const Color(0xFF195251);
-const kStack = const Color(0xFF7E807E);
+const kBostonBlue = const Color(0xFF377BC4);
+const kVictoria = const Color(0xFF544482);
 const kWhite = const Color(0xFFFFFFFF);
 const kBblack = const Color(0xFF000000);
-const kPrimaryLightColor = Color(0xFFFFECDF);
-const kSecondaryColor = Color(0xFF979797);
 const kTextColor = Color(0xFF000000);
 
 const kAnimationDuration = Duration(milliseconds: 400);

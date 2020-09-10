@@ -8,7 +8,7 @@ ThemeData theme() {
     fontFamily: "Lato",
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
-    cursorColor: kStack,
+    cursorColor: kGreenPea,
     inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
@@ -20,7 +20,7 @@ InputDecorationTheme inputDecorationTheme() {
     borderSide: BorderSide(color: kTextColor),
   );
   return InputDecorationTheme(
-    labelStyle: new TextStyle(color: kStack),
+    labelStyle: new TextStyle(color: kGreenPea),
     contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 0),
     enabledBorder: outlineInputBorder,
     focusedBorder: outlineInputBorder,
@@ -41,7 +41,7 @@ AppBarTheme appBarTheme() {
     elevation: 0,
     centerTitle: true,
     brightness: Brightness.light,
-    iconTheme: IconThemeData(color: kStack),
+    iconTheme: IconThemeData(color: kGreenPea),
     textTheme: TextTheme(
       headline6: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
     ),

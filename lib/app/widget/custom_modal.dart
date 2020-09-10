@@ -21,8 +21,8 @@ class _CustomModalState extends State<CustomModal> {
       title: Text('Oppps! 😟'),
       actions: <Widget>[
         OutlineButton(
-          textColor: kPumpkin,
-          borderSide: BorderSide(color: kPumpkin),
+          textColor: kAlgaeGreen,
+          borderSide: BorderSide(color: kAlgaeGreen),
           child: Text('OK'),
           onPressed: () {
             Navigator.pop(context);

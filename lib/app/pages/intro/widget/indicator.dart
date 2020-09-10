@@ -24,7 +24,7 @@ class Indicator extends StatelessWidget {
               width: 90,
               height: 90,
               child: CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation(kPumpkin),
+                valueColor: AlwaysStoppedAnimation(kAlgaeGreen),
                 value: (initialPage + 1) * 0.34,
               ),
             ),
@@ -43,7 +43,7 @@ class Indicator extends StatelessWidget {
                 width: 65,
                 height: 65,
                 decoration: BoxDecoration(
-                  color: kPumpkin,
+                  color: kAlgaeGreen,
                   borderRadius: BorderRadius.all(
                     Radius.circular(100),
                   ),
