@@ -57,17 +57,20 @@ class _SignFormState extends State<SignForm> {
           buildPasswordFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
           Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               GestureDetector(
                 // onTap: () => Navigator.pushNamed(
                 //     context, ForgotPasswordScreen.routeName),
                 child: Text(
-                  "Forgot Password",
+                  "Forgot Password?",
+                  style: TextStyle(
+                      color: kPuertoRico, fontWeight: FontWeight.w700),
                 ),
               )
             ],
           ),
-          SizedBox(height: getProportionateScreenHeight(20)),
+          SizedBox(height: getProportionateScreenHeight(32)),
           DefaultButton(
             text: "Continue",
             press: () {

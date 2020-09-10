@@ -33,7 +33,26 @@ class Body extends StatelessWidget {
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
                 SignForm(),
-                SizedBox(height: SizeConfig.screenHeight * 0.08),
+                SizedBox(height: SizeConfig.screenHeight * 0.03),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Expanded(
+                      child: Divider(thickness: 1, color: kPuertoRico),
+                    ),
+                    SizedBox(width: 10),
+                    Text(
+                      'Or',
+                      style: TextStyle(
+                          color: kPuertoRico, fontWeight: FontWeight.w500),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: Divider(thickness: 1, color: kPuertoRico),
+                    ),
+                  ],
+                ),
+                SizedBox(height: SizeConfig.screenHeight * 0.03),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
