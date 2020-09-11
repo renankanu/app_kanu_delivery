@@ -52,7 +52,7 @@ class CustomAppBar extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/sign_in');
+                Navigator.pushNamed(context, '/login');
                 // if ((initialPage + 1) < listStep.length) {
                 //   controller.animateToPage(listStep.length,
                 //       duration: kAnimationDuration, curve: Curves.easeInOut);

@@ -8,7 +8,7 @@ class SignUpModule extends ChildModule {
   @override
   List<ModularRouter> get routers => [
         ModularRouter(
-          "/sign_in",
+          "/login",
           child: (_, args) => SignUpScreen(),
           transition: TransitionType.downToUp,
         ),

@@ -1,5 +1,5 @@
 import 'package:app_kanu_delivery/app/constants.dart';
-import 'package:app_kanu_delivery/app/pages/login/widget/sign_form.dart';
+import 'package:app_kanu_delivery/app/pages/login/widget/login_form.dart';
 import 'package:app_kanu_delivery/app/utils/size_config.dart';
 import 'package:app_kanu_delivery/app/widget/no_account_text.dart';
 import 'package:app_kanu_delivery/app/widget/socal_card.dart';
@@ -28,7 +28,7 @@ class Body extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Sign in with your email and password  \nor continue with social media",
+                  "Login with your email and password  \nor continue with social media",
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
