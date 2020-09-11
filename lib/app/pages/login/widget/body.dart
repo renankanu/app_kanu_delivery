@@ -1,5 +1,6 @@
 import 'package:app_kanu_delivery/app/constants.dart';
 import 'package:app_kanu_delivery/app/pages/login/widget/login_form.dart';
+import 'package:app_kanu_delivery/app/utils/i18n/app_translate.dart';
 import 'package:app_kanu_delivery/app/utils/size_config.dart';
 import 'package:app_kanu_delivery/app/widget/no_account_text.dart';
 import 'package:app_kanu_delivery/app/widget/socal_card.dart';
@@ -37,16 +38,12 @@ class Body extends StatelessWidget {
                   children: [
                     SizedBox(height: SizeConfig.screenHeight * 0.04),
                     Text(
-                      "Welcome Back",
+                      AppTranslate(context).text('login.app_name'),
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
                       ),
-                    ),
-                    Text(
-                      "Login with your email and password  \nor continue with social media",
-                      textAlign: TextAlign.center,
                     ),
                     SizedBox(height: SizeConfig.screenHeight * 0.08),
                     SignForm(),
@@ -59,7 +56,7 @@ class Body extends StatelessWidget {
                         ),
                         SizedBox(width: 10),
                         Text(
-                          'Or',
+                          AppTranslate(context).text('login.or'),
                           style: TextStyle(
                               color: kPuertoRico, fontWeight: FontWeight.w500),
                         ),

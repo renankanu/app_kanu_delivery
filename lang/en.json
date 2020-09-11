@@ -8,5 +8,13 @@
     "screen_two_info": "Your order will be\nimmediately collected and\nsent by our courier",
     "screen_three_info": "Enjoy tasty and hot food, we try to \nbe is better for you."
   },
-  "login": {}
+  "login": {
+    "app_name": "Kanu Del",
+    "or": "or",
+    "forgot_password": "Forgot Password?",
+    "continue": "Continue",
+    "password": "Password",
+    "no_have_account": "Don’t have an account? ",
+    "register": "Register"
+  }
 }

@@ -1,4 +1,5 @@
 import 'package:app_kanu_delivery/app/constants.dart';
+import 'package:app_kanu_delivery/app/utils/i18n/app_translate.dart';
 import 'package:app_kanu_delivery/app/utils/size_config.dart';
 import 'package:app_kanu_delivery/app/widget/custom_modal.dart';
 import 'package:app_kanu_delivery/app/widget/default_button.dart';
@@ -63,7 +64,7 @@ class _SignFormState extends State<SignForm> {
                 // onTap: () => Navigator.pushNamed(
                 //     context, ForgotPasswordScreen.routeName),
                 child: Text(
-                  "Forgot Password?",
+                  AppTranslate(context).text('login.forgot_password'),
                   style: TextStyle(
                       color: kPuertoRico, fontWeight: FontWeight.w700),
                 ),
@@ -72,7 +73,7 @@ class _SignFormState extends State<SignForm> {
           ),
           SizedBox(height: getProportionateScreenHeight(32)),
           DefaultButton(
-            text: "Continue",
+            text: AppTranslate(context).text('login.continue'),
             press: () {
               validForm();
             },
@@ -87,7 +88,7 @@ class _SignFormState extends State<SignForm> {
       controller: _passwordController,
       obscureText: true,
       decoration: InputDecoration(
-        hintText: "Password",
+        hintText: AppTranslate(context).text('login.password'),
       ),
     );
   }

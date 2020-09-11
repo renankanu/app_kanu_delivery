@@ -8,5 +8,13 @@
     "screen_two_info": "Seu pedido será\nimediatamente recolhido e\nenviado pelo nosso(a) entregador(a).",
     "screen_three_info": "Desfrute de comida saborosa e quente, tentamos \nser o melhor para você."
   },
-  "login": {}
+  "login": {
+    "app_name": "Kanu Del",
+    "or": "ou",
+    "forgot_password": "Esqueceu a senha?",
+    "continue": "Entrar",
+    "password": "Senha",
+    "no_have_account": "Não tem uma conta? ",
+    "register": "Cadastrar"
+  }
 }
