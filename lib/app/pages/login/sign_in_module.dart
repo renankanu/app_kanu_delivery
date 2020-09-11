@@ -1,4 +1,4 @@
-import 'package:app_kanu_delivery/app/pages/sign_in/sign_in_screen.dart';
+import 'package:app_kanu_delivery/app/pages/login/sign_in_screen.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class SignInModule extends ChildModule {
