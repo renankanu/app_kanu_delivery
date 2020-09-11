@@ -10,72 +10,91 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return SafeArea(
+    return Container(
+      color: kAlgaeGreen,
       child: SizedBox(
         width: double.infinity,
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: SizeConfig.screenHeight * 0.04),
-                Text(
-                  "Welcome Back",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                  ),
+        child: Center(
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(
+                Radius.circular(40),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 1,
+                  blurRadius: 7,
+                  offset: Offset(1, 1), // changes position of shadow
                 ),
-                Text(
-                  "Login with your email and password  \nor continue with social media",
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(height: SizeConfig.screenHeight * 0.08),
-                SignForm(),
-                SizedBox(height: SizeConfig.screenHeight * 0.03),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Expanded(
-                      child: Divider(thickness: 1, color: kPuertoRico),
-                    ),
-                    SizedBox(width: 10),
-                    Text(
-                      'Or',
-                      style: TextStyle(
-                          color: kPuertoRico, fontWeight: FontWeight.w500),
-                    ),
-                    SizedBox(width: 10),
-                    Expanded(
-                      child: Divider(thickness: 1, color: kPuertoRico),
-                    ),
-                  ],
-                ),
-                SizedBox(height: SizeConfig.screenHeight * 0.03),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SocalCard(
-                        icon: Ionicons.logo_google,
-                        press: () {},
-                        color: kGoogleColor),
-                    SocalCard(
-                      icon: Ionicons.logo_facebook,
-                      press: () {},
-                      color: kFaceColor,
-                    ),
-                    SocalCard(
-                      icon: Ionicons.logo_apple,
-                      press: () {},
-                      color: Colors.black,
-                    ),
-                  ],
-                ),
-                SizedBox(height: 20),
-                NoAccountText(),
-                SizedBox(height: 20),
               ],
+            ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(height: SizeConfig.screenHeight * 0.04),
+                    Text(
+                      "Welcome Back",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "Login with your email and password  \nor continue with social media",
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: SizeConfig.screenHeight * 0.08),
+                    SignForm(),
+                    SizedBox(height: SizeConfig.screenHeight * 0.03),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Expanded(
+                          child: Divider(thickness: 1, color: kPuertoRico),
+                        ),
+                        SizedBox(width: 10),
+                        Text(
+                          'Or',
+                          style: TextStyle(
+                              color: kPuertoRico, fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(width: 10),
+                        Expanded(
+                          child: Divider(thickness: 1, color: kPuertoRico),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: SizeConfig.screenHeight * 0.03),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SocalCard(
+                            icon: Ionicons.logo_google,
+                            press: () {},
+                            color: kGoogleColor),
+                        SocalCard(
+                          icon: Ionicons.logo_facebook,
+                          press: () {},
+                          color: kFaceColor,
+                        ),
+                        SocalCard(
+                          icon: Ionicons.logo_apple,
+                          press: () {},
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20),
+                    NoAccountText(),
+                    SizedBox(height: 20),
+                  ],
+                ),
+              ),
             ),
           ),
         ),
