@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class IntroImage extends StatelessWidget {
   final String image;
@@ -7,7 +8,7 @@ class IntroImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
+    return SvgPicture.asset(
       image,
       height: MediaQuery.of(context).size.height * .4,
     );
