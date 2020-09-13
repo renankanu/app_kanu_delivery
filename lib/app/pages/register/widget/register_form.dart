@@ -13,6 +13,7 @@ class _RegisterFormState extends State<RegisterForm> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+  TextEditingController _confirmPasswordController = TextEditingController();
 
   void callModal(BuildContext context, String message) {
     showDialog(
@@ -37,6 +38,14 @@ class _RegisterFormState extends State<RegisterForm> {
     }
     if (_passwordController.text.length < 8) {
       callModal(context, kShortPassError);
+      return;
+    }
+    if (_confirmPasswordController.text.isEmpty) {
+      callModal(context, kPassNullError);
+      return;
+    }
+    if (_passwordController.text != _confirmPasswordController.text) {
+      callModal(context, kMatchPassError);
       return;
     }
     if (_formKey.currentState.validate()) {
@@ -70,7 +79,7 @@ class _RegisterFormState extends State<RegisterForm> {
 
   TextFormField buildConformPassFormField() {
     return TextFormField(
-      controller: _passwordController,
+      controller: _confirmPasswordController,
       obscureText: true,
       decoration: InputDecoration(
         hintText: "Confirm Password",
