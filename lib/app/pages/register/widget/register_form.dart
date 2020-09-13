@@ -1,8 +1,7 @@
 import 'package:app_kanu_delivery/app/constants.dart';
 import 'package:app_kanu_delivery/app/utils/size_config.dart';
-import 'package:app_kanu_delivery/app/widget/custom_surfix_icon.dart';
+import 'package:app_kanu_delivery/app/widget/custom_modal.dart';
 import 'package:app_kanu_delivery/app/widget/default_button.dart';
-import 'package:app_kanu_delivery/app/widget/form_error.dart';
 import 'package:flutter/material.dart';
 
 class RegisterForm extends StatefulWidget {
@@ -12,24 +11,38 @@ class RegisterForm extends StatefulWidget {
 
 class _RegisterFormState extends State<RegisterForm> {
   final _formKey = GlobalKey<FormState>();
-  String email;
-  String password;
-  String conformPassword;
-  bool remember = false;
-  final List<String> errors = [];
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
 
-  void addError({String error}) {
-    if (!errors.contains(error))
-      setState(() {
-        errors.add(error);
-      });
+  void callModal(BuildContext context, String message) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return CustomModal(message: message);
+        });
   }
 
-  void removeError({String error}) {
-    if (errors.contains(error))
-      setState(() {
-        errors.remove(error);
-      });
+  void validForm() {
+    if (_emailController.text.isEmpty) {
+      callModal(context, kEmailNullError);
+      return;
+    }
+    if (!emailValidatorRegExp.hasMatch(_emailController.text)) {
+      callModal(context, kInvalidEmailError);
+      return;
+    }
+    if (_passwordController.text.isEmpty) {
+      callModal(context, kPassNullError);
+      return;
+    }
+    if (_passwordController.text.length < 8) {
+      callModal(context, kShortPassError);
+      return;
+    }
+    if (_formKey.currentState.validate()) {
+      _formKey.currentState.save();
+      //call
+    }
   }
 
   @override
@@ -43,15 +56,11 @@ class _RegisterFormState extends State<RegisterForm> {
           buildPasswordFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
           buildConformPassFormField(),
-          FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(40)),
           DefaultButton(
             text: "Continue",
             press: () {
-              if (_formKey.currentState.validate()) {
-                _formKey.currentState.save();
-                // Navigator.pushNamed(context, CompleteProfileScreen.routeName);
-              }
+              validForm();
             },
           ),
         ],
@@ -61,97 +70,30 @@ class _RegisterFormState extends State<RegisterForm> {
 
   TextFormField buildConformPassFormField() {
     return TextFormField(
+      controller: _passwordController,
       obscureText: true,
-      onSaved: (newValue) => conformPassword = newValue,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kPassNullError);
-        } else if (value.isNotEmpty && password == conformPassword) {
-          removeError(error: kMatchPassError);
-        }
-        conformPassword = value;
-      },
-      validator: (value) {
-        if (value.isEmpty) {
-          addError(error: kPassNullError);
-          return "";
-        } else if ((password != value)) {
-          addError(error: kMatchPassError);
-          return "";
-        }
-        return null;
-      },
       decoration: InputDecoration(
-        labelText: "Confirm Password",
-        hintText: "Re-enter your password",
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        hintText: "Confirm Password",
       ),
     );
   }
 
   TextFormField buildPasswordFormField() {
     return TextFormField(
+      controller: _passwordController,
       obscureText: true,
-      onSaved: (newValue) => password = newValue,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kPassNullError);
-        } else if (value.length >= 8) {
-          removeError(error: kShortPassError);
-        }
-        password = value;
-      },
-      validator: (value) {
-        if (value.isEmpty) {
-          addError(error: kPassNullError);
-          return "";
-        } else if (value.length < 8) {
-          addError(error: kShortPassError);
-          return "";
-        }
-        return null;
-      },
       decoration: InputDecoration(
-        labelText: "Password",
-        hintText: "Enter your password",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        hintText: "Password",
       ),
     );
   }
 
   TextFormField buildEmailFormField() {
     return TextFormField(
+      controller: _emailController,
       keyboardType: TextInputType.emailAddress,
-      onSaved: (newValue) => email = newValue,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kEmailNullError);
-        } else if (emailValidatorRegExp.hasMatch(value)) {
-          removeError(error: kInvalidEmailError);
-        }
-        return null;
-      },
-      validator: (value) {
-        if (value.isEmpty) {
-          addError(error: kEmailNullError);
-          return "";
-        } else if (!emailValidatorRegExp.hasMatch(value)) {
-          addError(error: kInvalidEmailError);
-          return "";
-        }
-        return null;
-      },
       decoration: InputDecoration(
-        labelText: "Email",
-        hintText: "Enter your email",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
+        hintText: "Email",
       ),
     );
   }
