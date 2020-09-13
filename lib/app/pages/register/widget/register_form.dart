@@ -5,12 +5,12 @@ import 'package:app_kanu_delivery/app/widget/default_button.dart';
 import 'package:app_kanu_delivery/app/widget/form_error.dart';
 import 'package:flutter/material.dart';
 
-class SignUpForm extends StatefulWidget {
+class RegisterForm extends StatefulWidget {
   @override
-  _SignUpFormState createState() => _SignUpFormState();
+  _RegisterFormState createState() => _RegisterFormState();
 }
 
-class _SignUpFormState extends State<SignUpForm> {
+class _RegisterFormState extends State<RegisterForm> {
   final _formKey = GlobalKey<FormState>();
   String email;
   String password;
@@ -84,8 +84,6 @@ class _SignUpFormState extends State<SignUpForm> {
       decoration: InputDecoration(
         labelText: "Confirm Password",
         hintText: "Re-enter your password",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),

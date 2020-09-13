@@ -5,12 +5,12 @@ import 'package:app_kanu_delivery/app/widget/custom_modal.dart';
 import 'package:app_kanu_delivery/app/widget/default_button.dart';
 import 'package:flutter/material.dart';
 
-class SignForm extends StatefulWidget {
+class LoginForm extends StatefulWidget {
   @override
-  _SignFormState createState() => _SignFormState();
+  _LoginFormState createState() => _LoginFormState();
 }
 
-class _SignFormState extends State<SignForm> {
+class _LoginFormState extends State<LoginForm> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();

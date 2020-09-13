@@ -1,7 +1,7 @@
-import 'package:app_kanu_delivery/app/pages/sign_up/sign_up_screen.dart';
+import 'package:app_kanu_delivery/app/pages/register/register_screen.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class SignUpModule extends ChildModule {
+class RegisterModule extends ChildModule {
   @override
   List<Bind> get binds => [];
 
@@ -9,10 +9,10 @@ class SignUpModule extends ChildModule {
   List<ModularRouter> get routers => [
         ModularRouter(
           "/login",
-          child: (_, args) => SignUpScreen(),
+          child: (_, args) => RegisterScreen(),
           transition: TransitionType.downToUp,
         ),
       ];
 
-  static Inject get to => Inject<SignUpModule>.of();
+  static Inject get to => Inject<RegisterModule>.of();
 }

@@ -1,4 +1,7 @@
 {
+  "all": {
+    "app_name": "Kanu Del"
+  },
   "intro": {
     "skip": "Skip",
     "screen_one_title": "Choose your order",
@@ -9,12 +12,15 @@
     "screen_three_info": "Enjoy tasty and hot food, we try to \nbe is better for you."
   },
   "login": {
-    "app_name": "Kanu Del",
     "or": "or",
     "forgot_password": "Forgot Password?",
     "continue": "Continue",
     "password": "Password",
     "no_have_account": "Don’t have an account? ",
     "register": "Register"
+  },
+  "register": {
+    "register_title": "Register",
+    "accept_terms": "By continuing your confirm that you agree \nwith our Term and Condition"
   }
 }

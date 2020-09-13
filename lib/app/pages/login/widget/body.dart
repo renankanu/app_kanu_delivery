@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.04),
                 Text(
-                  AppTranslate(context).text('login.app_name'),
+                  AppTranslate(context).text('all.app_name'),
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 28,
@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
-                SignForm(),
+                LoginForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.03),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

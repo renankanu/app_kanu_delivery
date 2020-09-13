@@ -1,9 +1,10 @@
 import 'package:app_kanu_delivery/app/constants.dart';
+import 'package:app_kanu_delivery/app/utils/i18n/app_translate.dart';
 import 'package:app_kanu_delivery/app/utils/size_config.dart';
 import 'package:app_kanu_delivery/app/widget/socal_card.dart';
 import 'package:flutter/material.dart';
 
-import 'sign_up_form.dart';
+import 'register_form.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -18,17 +19,14 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.04),
-                Text("Register Account", style: headingStyle),
-                Text(
-                  "Complete your details or continue \nwith social media",
-                  textAlign: TextAlign.center,
-                ),
+                Text(AppTranslate(context).text('all.app_name'),
+                    style: headingStyle),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
-                SignUpForm(),
+                RegisterForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
                 SizedBox(height: getProportionateScreenHeight(20)),
                 Text(
-                  'By continuing your confirm that you agree \nwith our Term and Condition',
+                  AppTranslate(context).text('register.accept_terms'),
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.caption,
                 )

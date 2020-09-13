@@ -1,4 +1,7 @@
 {
+  "all": {
+    "app_name": "Kanu Del"
+  },
   "intro": {
     "skip": "Pular",
     "screen_one_title": "Escolha seu pedido",
@@ -9,12 +12,15 @@
     "screen_three_info": "Desfrute de comida saborosa e quente, tentamos \nser o melhor para você."
   },
   "login": {
-    "app_name": "Kanu Del",
     "or": "ou",
     "forgot_password": "Esqueceu a senha?",
     "continue": "Entrar",
     "password": "Senha",
     "no_have_account": "Não tem uma conta? ",
     "register": "Cadastrar"
+  },
+  "register": {
+    "register_title": "Cadastrar",
+    "accept_terms": "Ao continuar, você confirma que concorda com \nnosso Termo e Condição"
   }
 }
