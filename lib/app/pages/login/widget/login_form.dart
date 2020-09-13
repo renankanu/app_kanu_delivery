@@ -14,7 +14,6 @@ class _LoginFormState extends State<LoginForm> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
-  bool remember = false;
 
   void callModal(BuildContext context, String message) {
     showDialog(
