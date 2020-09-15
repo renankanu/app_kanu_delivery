@@ -21,6 +21,9 @@
   },
   "register": {
     "register_title": "Cadastrar",
-    "accept_terms": "Ao continuar, você confirma que concorda com \nnosso Termo e Condição"
+    "accept_terms": "Ao continuar, você confirma que concorda com \nnosso Termo e Condição",
+    "register": "Cadastrar",
+    "confirm_password": "Confirme a Senha",
+    "password": "Senha"
   }
 }

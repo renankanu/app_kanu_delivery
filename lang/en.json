@@ -21,6 +21,9 @@
   },
   "register": {
     "register_title": "Register",
-    "accept_terms": "By continuing your confirm that you agree \nwith our Term and Condition"
+    "accept_terms": "By continuing your confirm that you agree \nwith our Term and Condition",
+    "register": "Register",
+    "confirm_password": "Confirm Password",
+    "password": "Password"
   }
 }

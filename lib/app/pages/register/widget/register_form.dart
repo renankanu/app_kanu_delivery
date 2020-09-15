@@ -1,4 +1,5 @@
 import 'package:app_kanu_delivery/app/constants.dart';
+import 'package:app_kanu_delivery/app/utils/i18n/app_translate.dart';
 import 'package:app_kanu_delivery/app/utils/size_config.dart';
 import 'package:app_kanu_delivery/app/widget/custom_modal.dart';
 import 'package:app_kanu_delivery/app/widget/default_button.dart';
@@ -67,7 +68,7 @@ class _RegisterFormState extends State<RegisterForm> {
           buildConformPassFormField(),
           SizedBox(height: getProportionateScreenHeight(40)),
           DefaultButton(
-            text: "Continue",
+            text: AppTranslate(context).text('register.register'),
             press: () {
               validForm();
             },
@@ -82,7 +83,7 @@ class _RegisterFormState extends State<RegisterForm> {
       controller: _confirmPasswordController,
       obscureText: true,
       decoration: InputDecoration(
-        hintText: "Confirm Password",
+        hintText: AppTranslate(context).text('register.confirm_password'),
       ),
     );
   }
@@ -92,7 +93,7 @@ class _RegisterFormState extends State<RegisterForm> {
       controller: _passwordController,
       obscureText: true,
       decoration: InputDecoration(
-        hintText: "Password",
+        hintText: AppTranslate(context).text('register.password'),
       ),
     );
   }
