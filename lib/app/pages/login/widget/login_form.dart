@@ -42,7 +42,7 @@ class _LoginFormState extends State<LoginForm> {
     }
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
-      //call
+      Navigator.pushNamed(context, '/home');
     }
   }
 
