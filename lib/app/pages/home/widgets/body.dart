@@ -27,11 +27,24 @@ class Body extends StatelessWidget {
           height: 20,
         ),
         Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: TextFormField(
+            decoration: const InputDecoration(
+              fillColor: KAthensGray,
+              filled: true,
+              prefixIcon: Icon(Icons.search),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Padding(
           padding: const EdgeInsets.only(left: 20),
           child: Text('Category'),
         ),
         SizedBox(
-          height: 20,
+          height: 10,
         ),
         Padding(
           padding: const EdgeInsets.only(left: 20),
