@@ -18,9 +18,27 @@ class Body extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Text(
-            "Let's eat\nQuality food",
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Let's eat\nQuality food",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: kGreenPea,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                child: Center(
+                  child: Icon(Icons.shopping_cart, color: Colors.white),
+                ),
+              )
+            ],
           ),
         ),
         SizedBox(
