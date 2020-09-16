@@ -30,11 +30,17 @@ class Body extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: TextFormField(
             decoration: InputDecoration(
-              fillColor: KAthensGray,
+              fillColor: KathensGray,
               filled: true,
-              prefixIcon: Icon(Icons.search),
+              prefixIcon: Icon(
+                Icons.search,
+                color: Colors.grey,
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: KathensGray),
+              ),
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey, width: 0.0),
+                borderSide: BorderSide(color: KathensGray),
               ),
             ),
           ),

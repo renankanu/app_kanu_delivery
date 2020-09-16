@@ -11,7 +11,7 @@ const kBblack = const Color(0xFF000000);
 const kTextColor = Color(0xFF000000);
 const kFaceColor = Color(0xFF3b5998);
 const kGoogleColor = Color(0xFFDB4437);
-const KAthensGray = Color(0xFFECEEF1);
+const KathensGray = Color(0xFFECEEF1);
 
 const kAnimationDuration = Duration(milliseconds: 400);
 
