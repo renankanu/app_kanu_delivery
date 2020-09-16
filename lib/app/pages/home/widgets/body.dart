@@ -28,6 +28,13 @@ class Body extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.only(left: 20),
+          child: Text('Category'),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 20),
           child: Container(
             height: 40,
             child: ListView.builder(
