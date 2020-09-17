@@ -32,7 +32,9 @@ class _HomeScreenState extends State<HomeScreen> {
               : BoxDecoration(),
           child: Icon(
             icon,
-            color: index == _selectedItemIndex ? kGreenPea : Colors.grey,
+            color: index == _selectedItemIndex
+                ? kGreenPea
+                : Colors.black.withOpacity(0.6),
           ),
         ),
       );
