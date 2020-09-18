@@ -41,14 +41,16 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     return Scaffold(
-      bottomNavigationBar: Row(
-        children: [
-          buildNavBarItem(Icons.search, 0),
-          buildNavBarItem(Icons.favorite_border, 1),
-          buildNavBarItem(Icons.home, 2),
-          buildNavBarItem(Icons.chat_bubble_outline, 3),
-          buildNavBarItem(Icons.person, 4),
-        ],
+      bottomNavigationBar: SafeArea(
+        child: Row(
+          children: [
+            buildNavBarItem(Icons.search, 0),
+            buildNavBarItem(Icons.favorite_border, 1),
+            buildNavBarItem(Icons.home, 2),
+            buildNavBarItem(Icons.chat_bubble_outline, 3),
+            buildNavBarItem(Icons.person, 4),
+          ],
+        ),
       ),
       body: SafeArea(
         child: Body(),
