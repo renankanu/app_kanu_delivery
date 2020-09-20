@@ -9,6 +9,7 @@ class Body extends StatelessWidget {
     'Pizza',
     'Drinks',
     'Fitness Food',
+    'Vegetarian',
     'Vegan'
   ];
   @override
